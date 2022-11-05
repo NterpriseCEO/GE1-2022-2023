@@ -12,17 +12,6 @@ public class Bullet : MonoBehaviour
         seed = Random.Range(1000, 2000);
     }
 
-    public void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "brick")
-        {
-            GameObject.Destroy(this.gameObject);
-            GameObject.Destroy(collision.gameObject);
-            Debug.Log("Explosion");
-
-        }
-    }
-
     float seed;
 
     // Update is called once per frame
